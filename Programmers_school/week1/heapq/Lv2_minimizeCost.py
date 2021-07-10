@@ -16,8 +16,7 @@ def solution(no, works):
             heapq.heappush(works_reverse, min_work + 1)
         else:
             return 0
-    
-    for work in works_reverse:
-        result += work * work
+
+    return sum([work*work for work in works_reverse])
     
     return result
