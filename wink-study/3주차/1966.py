@@ -16,10 +16,10 @@ for i in range(testcases):
     op = -1  
 
     while op != k:
-        if docs_deq[0][0] < max(docs_deq)[0]:  
-            docs_deq.append(docs_deq.popleft())
-        else:
-            op = docs_deq.popleft()[1]
+        if docs_deq[0][0] < max(docs_deq)[0]:    #문서의 중요도가 최대값이 아니면
+            docs_deq.append(docs_deq.popleft())  #문서를 덱의 맨 뒤로 넣어줌
+        else:                                    #문서의 중요도가 젤 큰 문서가 앞으로 오면
+            op = docs_deq.popleft()[1]           #문서의 중요도가 k인 문서가 나올때까지 popleft진행하며 count
             count += 1
  
  
