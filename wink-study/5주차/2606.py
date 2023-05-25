@@ -1,11 +1,11 @@
 import sys
 input = sys.stdin.readline
 
-nodes = int(input())
+n = int(input())
 links = int(input())
 infected = [1]                                    #감염된 컴퓨터들을 기록
 
-nodesLink = [[i] for i in range(1, nodes+1)]      #노드의 링크 정보를 담을 리스트
+nodesLink = [[i] for i in range(1, n+1)]      #노드의 링크 정보를 담을 리스트
 
 def dfs(host ,l, infected):                       #host는 탐색을 하는 위치, l은 링크 정보를 담은 리스트, infected는 감염된 컴퓨터들을 기록
     nodes = l[host-1]                             
