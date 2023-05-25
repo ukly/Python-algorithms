@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 nodes = int(input())
 links = int(input())
-infected = [1]
+infected = [1]                                    #감염된 컴퓨터들을 기록
 
 nodesLink = [[i] for i in range(1, nodes+1)]      #노드의 링크 정보를 담을 리스트
 
